@@ -7,7 +7,7 @@ let stringDez = '10'
 
 function compara () {
 
-    if (numeroUm == stringUm) {
+    if (numeroUm == stringUm && numeroUm !== stringUm) {
     console.log('As variáveis numeroUm e stringUm tem o mesmo valor, mas tipos diferentes')
     } else {
     console.log('As variáveis numeroUm e stringUm não tem o mesmo valor')
@@ -19,7 +19,7 @@ function compara () {
     console.log('As variáveis numeroTrinta e stringTrinta não tem o mesmo tipo')
     }
 
-    if (numeroDez == stringDez) {
+    if (numeroDez == stringDez && numeroDez !== stringDez) {
     console.log('As variáveis numeroDez e stringDez tem o mesmo valor, mas tipos diferentes')
     } else {
     console.log('As variáveis numeroDez e stringDez não tem o mesmo valor')
