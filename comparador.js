@@ -5,6 +5,7 @@ let stringTrinta = '30'
 let numeroDez = 10
 let stringDez = '10'
 
+//Exercício 1
 function compara () {
 
     if (numeroUm == stringUm && numeroUm !== stringUm) {
@@ -29,5 +30,6 @@ function compara () {
 const botao = document.querySelector('.comparar')
 
 botao.onclick = function () {
-    compara()
+    compara
 }
+
