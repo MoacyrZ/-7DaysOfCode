@@ -4,5 +4,6 @@
 ```
 Ex. 1: Abra o arquivo HTML no navegador e click no botão.
 ```
+```
 Ex.2: Abra o arquivo HTML no navegador e siga as instruções.
 ```
