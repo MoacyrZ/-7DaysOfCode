@@ -1,0 +1,54 @@
+<script>
+    area = prompt("Qual area quer seguir? Responda 1 para Back-end e 2 para Front-end");
+    if (area == 1) {
+        espec = prompt("Voce pretende aprender (1) React ou (2) Vue?");
+        area = "Front-end";
+        if (espec == 1) {
+            espec = "React";
+        }
+        else {
+            espec = "Vue";
+        }
+    }
+    else if (area == 2) {
+        espec = prompt("Voce pretende aprender (1) C# ou (2) Java?");
+        area = "Back-end"
+        if (espec == 1) {
+            espec = "C#";
+        }
+        else {
+            espec = "Java";
+        }
+    }
+    full = prompt("(1) Você pretende continuar se especializando em " + area + " ou (2) pretende seguir se desenvolvendo para ser Fullstack?");
+    if (full == 1) {
+            full = "especialista";
+        }
+        else {
+            full = "Fullstack";
+        }
+
+    trava = prompt("Você possui interesse em alguma outra tecnologia? Responda 1 para sim e 2 para não");
+    primeira = true;
+
+    while (trava == 1) {
+        if(primeira){
+            conhecimentos = prompt("Qual o nome dessa tecnologia?");
+            primeira = false;
+            continue;
+        }
+        
+        trava = prompt("Você possui interesse em alguma outra tecnologia? Responda 1 para sim e 2 para não");
+
+        if (trava == 1 && primeira == false) {
+            tecnologia = prompt("Qual o nome dessa tecnologia?");
+            conhecimentos = conhecimentos + ", " + tecnologia;
+            trava = prompt("Você possui interesse em alguma outra tecnologia? Responda 1 para sim e 2 para não");
+        }
+        
+    }
+
+    const msg = `"Boa sorte na sua carreira de ${area} e ${espec}, você vai se tornar um ${full} e estudará ${conhecimentos}, terá um futuro brilhante!"!`;
+
+    alert(msg);
+</script> 
