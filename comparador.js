@@ -31,5 +31,5 @@ const botao = document.querySelector('.comparar')
 
 botao.onclick = function () {
     compara
-}
+} 
 
