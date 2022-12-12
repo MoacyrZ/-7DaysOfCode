@@ -1,0 +1,29 @@
+<script>
+    numeroSecreto = Math.round(Math.random()*10);
+    let frutas = [];
+    let laticinios = [];
+    let doces = [];
+    let graos = [];
+    let bebidas = [];
+    let outros = [];
+    var msg;
+
+    add = prompt("Você deseja adicionar um item em sua lista? Responda 1 para sim e 2 para não.");
+    
+    while (add == 1) {
+        item = prompt("Qual item você deseja adicionar?");
+        categoria = prompt("Em qual categoria esse item se encaixa? (1) Frutas, (2) laticinios, (3) doces, (4) grãos, (5) bebidas ou (6) outros.");
+        listaCategoria = [frutas, laticinios, doces, graos, bebidas, outros]
+        
+        for (let i = 0; i < listaCategoria.length; i++) {
+            if (categoria == i + 1) {
+                listaCategoria[i].push(" " + item);
+            }
+        }
+
+        add = prompt("Você deseja adicionar outro item? Responda 1 para sim e 2 para não.");
+    }
+
+    msg = `"Lista de compras:\n Frutas:${frutas}\n Laticinios:${laticinios}\n Doces:${doces}\n Grãos:${graos}\n Bebida:${bebidas}\n Outros:${outros}."`;
+    alert(msg);
+</script> 
