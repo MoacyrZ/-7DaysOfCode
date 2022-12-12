@@ -1,5 +1,5 @@
 # 7DaysOfCode
-<p>Comparação de variaveis pré estabelecidas, compara tipo de variaveis de acordo com a instrução pré estabelecida.</p>
+<p>Exercícios para o desafio 7 Days of Code da Alura.</p>
 
 ```
 Ex. 1: Abra o arquivo index.HTML no navegador e click no botão.
