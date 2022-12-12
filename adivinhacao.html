@@ -1,0 +1,29 @@
+<script>
+    numeroSecreto = Math.round(Math.random()*10);
+    let tentativas = 10;
+    let erro = 0;
+    var msg;
+    let acertou = false;
+
+    chute = prompt("Qual número estou pensando? Digite um número de 1 à 10, você tem " + tentativas + " chances para acertar.");
+    
+    while (erro < tentativas) {
+        if (chute == numeroSecreto) {
+            erro++
+            msg = `"Parabéns, você acertou o número que pensei em ${erro} tentativas!"!`;
+            acertou = true;
+            break;
+
+        }
+        else {
+            erro++;
+            chute = prompt("Esse não era o número que pensei, tente outro número. Você tem mais " + (tentativas - erro) + " tentativas.");
+        }
+    }
+
+    if (acertou == false) {
+        msg = `"Acabaram as tentativas, o número que eu tinha pensado era ${numeroSecreto}".`;
+    }
+
+    alert(msg);
+</script> 
