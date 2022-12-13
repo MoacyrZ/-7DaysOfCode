@@ -1,0 +1,44 @@
+<script>
+    numeroSecreto = Math.round(Math.random()*10);
+    let frutas = [];
+    let laticinios = [];
+    let doces = [];
+    let graos = [];
+    let bebidas = [];
+    let outros = [];
+    var msg;
+    const listaCategoria = [frutas, laticinios, doces, graos, bebidas, outros];
+    let listaNumerada = " ";
+
+    add = prompt("Você deseja adicionar um item em sua lista? Responda 1 para sim e 2 para não.");
+    
+    while (add < 3) {
+        
+        
+        if (add == 1) {
+            item = prompt("Qual item você deseja adicionar?");
+            categoria = prompt("Em qual categoria esse item se encaixa? (1) Frutas, (2) laticinios, (3) doces, (4) grãos, (5) bebidas ou (6) outros.");
+            for (let i = 0; i < listaCategoria.length; i++) {
+                if (categoria == i + 1) {
+                listaCategoria[i].push(" " + item);
+                } 
+            }
+        }
+        else {
+            removerLista = prompt("De qual lista você deseja remover o item?\n (1) Frutas (2) Laticinios (3) Doces (4) Grãos (5) Bebida (6) Outros.") - 1;
+            for (let i = 0; i < listaCategoria[removerLista].length; i++) {
+                listaNumerada += " (" + (i + 1) + ")" + listaCategoria[removerLista][i];
+            }
+            removerItem = prompt("Qual item você deseja remover?\n " + listaNumerada + ".") - 1;
+            listaCategoria[removerLista].splice(removerItem, 1);
+            msg = `Lista de compras atualizada:\n Frutas:${frutas}\n Laticinios:${laticinios}\n Doces:${doces}\n Grãos:${graos}\n Bebida:${bebidas}\n Outros:${outros}.`
+            alert(msg);
+        }
+    
+
+        add = prompt("Você deseja adicionar ou remover um item? Responda 1 para adicionar, 2 para remover e 3 para finalizar a lista.");
+    }
+
+    msg = `Lista de compras:\n Frutas:${frutas}\n Laticinios:${laticinios}\n Doces:${doces}\n Grãos:${graos}\n Bebida:${bebidas}\n Outros:${outros}.`;
+    alert(msg);
+</script> 
