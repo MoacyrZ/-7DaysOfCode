@@ -1,0 +1,73 @@
+<script>
+
+    let continuar = true;
+    let resultado = "";
+
+    modo = prompt("Qual operação deseja realizar? (1) soma, (2) subtração, (3) multiplicação ou (4) divisão.");
+
+    while (continuar) {
+        numeros();
+
+        switch (modo) {
+            case "1": 
+            case "soma":
+                resultado = somar(primeiroN, segundoN);
+                break;
+            case "2": 
+            case "subtração":
+                resultado = subtrair(primeiroN, segundoN);
+                break;
+            case "3": 
+            case "multiplicação":
+                resultado = multiplicar(primeiroN, segundoN);
+                break;
+            case "4": 
+            case "divisão":
+                resultado = dividir(primeiroN, segundoN);
+                break;
+        }
+
+        mensagem(resultado);
+
+        modo = prompt("Qual operação deseja realizar? (1) soma, (2) subtração, (3) multiplicação, (4) divisão ou (5) sair.");
+
+        if (modo == "5" || modo == "sair"){
+            continuar = false;
+            msg = `Até a próxima!`;
+        }
+            
+    }
+
+    alert(msg);
+
+    function numeros() {
+        primeiroN = parseInt(prompt("Digite o primeiro número."));
+        segundoN = parseInt(prompt("Digite o segundo número."));
+        return primeiroN, segundoN;
+    }
+
+    function somar(primeiroN, segundoN) {
+        resultado = primeiroN + segundoN;
+        return resultado
+    }
+
+    function subtrair(primeiroN, segundoN) {
+        resultado = primeiroN - segundoN;
+        return resultado
+    }
+
+    function multiplicar(primeiroN, segundoN) {
+        resultado = primeiroN * segundoN;
+        return resultado
+    }
+    
+    function dividir(primeiroN, segundoN) {
+        resultado = primeiroN / segundoN;
+        return resultado
+    }
+
+    function mensagem(resultado) {
+        msg = `Resultado: ${resultado}`;
+        alert(msg);
+    }
+</script> 
