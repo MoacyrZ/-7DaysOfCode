@@ -19,3 +19,6 @@ Ex.5: Abra o arquivo lista.HTML no navegador e siga as instruções.
 ```
 Ex.6: Abra o arquivo lista_2.HTML no navegador e siga as instruções.
 ```
+```
+Ex.7: Abra o arquivo calculadora.HTML no navegador e siga as instruções.
+```
